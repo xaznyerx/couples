@@ -38,8 +38,33 @@ const articles = [
 ]
 
 export default function WritingPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://jessie-wang.uk/" },
+          { "@type": "ListItem", position: 2, name: "Writing", item: "https://jessie-wang.uk/writing" },
+        ],
+      },
+      ...articles.map((article) => ({
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://jessie-wang.uk/" },
+          { "@type": "ListItem", position: 2, name: "Writing", item: "https://jessie-wang.uk/writing" },
+          { "@type": "ListItem", position: 3, name: article.title, item: `https://jessie-wang.uk/writing/${article.slug}` },
+        ],
+      })),
+    ],
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main>
         {/* Header */}

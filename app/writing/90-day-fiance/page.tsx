@@ -97,8 +97,20 @@ function TakeawayBox({ title, children }: { title: string; children: React.React
 }
 
 export default function NinetyDayArticle() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: "Beyond the Drama: 90 Day Fiancé's Truths on Intercultural Relationships",
+    author: { "@type": "Person", name: "Jessie Wang" },
+    datePublished: "2025-01",
+    description:
+      "A look at what 90 Day Fiancé can teach us about intercultural relationships, communication, family expectations, and repair.",
+    url: "https://jessie-wang.uk/writing/90-day-fiance",
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <Navbar />
       <main>
         {/* Article Hero - Dark header */}

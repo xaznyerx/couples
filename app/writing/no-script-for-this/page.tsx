@@ -117,8 +117,20 @@ function Divider() {
 }
 
 export default function NoScriptArticle() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: "No Script for This",
+    author: { "@type": "Person", name: "Jessie Wang" },
+    datePublished: "2025",
+    description:
+      "A guide to supporting your partner when identity-based news creates stress, uncertainty, and difficult conversations.",
+    url: "https://jessie-wang.uk/writing/no-script-for-this",
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <Navbar />
       <main>
         {/* Article Hero - Dark header */}

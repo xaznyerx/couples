@@ -10,8 +10,23 @@ export const metadata: Metadata = {
 }
 
 export default function InterculturalCouplesRiseArticle() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: "Intercultural Couples on the Rise",
+    author: { "@type": "Person", name: "Jessie Wang" },
+    datePublished: "2025",
+    description:
+      "The numbers, forces driving the rise of intercultural couples, and the relationship fault lines they may encounter.",
+    url: "https://jessie-wang.uk/writing/intercultural-couples-rise",
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main>
         {/* Dark header */}
