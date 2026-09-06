@@ -123,7 +123,7 @@ export default function SpecializationsPage() {
                 what you&apos;ve been{" "}
                 <em className="italic text-clay">looking for?</em>
               </h3>
-              <BtnPrimary href="mailto:hello@jessiewang.co.uk">
+              <BtnPrimary href="mailto:hello@jessie-wang.uk">
                 Book a free 20-min consultation
               </BtnPrimary>
             </div>

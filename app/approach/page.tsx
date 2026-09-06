@@ -303,7 +303,7 @@ export default function ApproachPage() {
                 this is the right{" "}
                 <em className="italic text-clay">fit for you?</em>
               </h3>
-              <BtnPrimary href="mailto:hello@jessiewang.co.uk">
+              <BtnPrimary href="mailto:hello@jessie-wang.uk">
                 Book a free 20-min call
               </BtnPrimary>
             </div>

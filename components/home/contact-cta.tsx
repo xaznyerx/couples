@@ -14,14 +14,14 @@ export default function ContactCta() {
           The hardest part is reaching out. I offer a free 20-minute
           consultation — no commitment, no pressure. Just a conversation.
         </p>
-        <BtnPrimary href="mailto:hello@jessiewang.co.uk">
+        <BtnPrimary href="mailto:hello@jessie-wang.uk">
           Book a free consultation
         </BtnPrimary>
         <p className="text-sm text-muted-foreground mt-5">
           Or email{" "}
           <strong>
-            <a href="mailto:hello@jessiewang.co.uk" className="text-ink no-underline">
-              hello@jessiewang.co.uk
+            <a href="mailto:hello@jessie-wang.uk" className="text-ink no-underline">
+              hello@jessie-wang.uk
             </a>
           </strong>{" "}
           &middot; In-person London &middot; Online UK-wide
